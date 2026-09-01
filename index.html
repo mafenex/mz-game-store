@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="MZ Game Store - Packs e recursos para jogos.">
+  <meta
+    name="description"
+    content="MZ Game Store - Conteúdos e produtos para os teus jogos favoritos."
+  >
+
   <title>MZ Game Store</title>
 
   <link rel="stylesheet" href="style.css">
@@ -12,82 +16,311 @@
 
 <body>
 
+  <!-- =========================
+       CABEÇALHO
+  ========================== -->
+
   <header class="header">
+
     <div class="container nav">
+
       <a href="#inicio" class="logo">
         MZ <span>GAME STORE</span>
       </a>
 
       <nav>
         <a href="#inicio">Início</a>
-        <a href="#produtos">Produtos</a>
-        <a href="#sobre">Sobre</a>
+        <a href="#jogos">Jogos</a>
         <a href="#contacto">Contacto</a>
       </nav>
+
     </div>
+
   </header>
+
 
   <main>
 
+    <!-- =========================
+         PÁGINA INICIAL
+    ========================== -->
+
     <section id="inicio" class="hero">
+
       <div class="container">
+
         <p class="tag">🎮 MZ GAME STORE</p>
 
         <h1>
-          Recursos para<br>
-          elevar o teu jogo.
+          Escolhe o teu<br>
+          jogo favorito.
         </h1>
 
         <p class="hero-text">
-          Encontra packs, recursos e produtos para jogos
-          num só lugar.
+          Encontra conteúdos, packs, recursos e produtos
+          para os teus jogos favoritos.
         </p>
 
-        <a href="#produtos" class="btn">
-          Ver produtos
+        <a href="#jogos" class="btn">
+          Ver jogos
         </a>
+
       </div>
+
     </section>
 
 
-    <section id="produtos" class="section">
+    <!-- =========================
+         JOGOS
+    ========================== -->
+
+    <section id="jogos" class="section games-section">
+
       <div class="container">
 
         <div class="section-title">
-          <p class="tag">LOJA</p>
-          <h2>Produtos em destaque</h2>
-          <p>Escolhe o teu produto e compra diretamente pelo WhatsApp.</p>
+
+          <p class="tag">JOGOS</p>
+
+          <h2>
+            Escolha o teu jogo
+          </h2>
+
+          <p>
+            Clique num jogo para ver os conteúdos disponíveis.
+          </p>
+
         </div>
 
-        <div id="productGrid" class="products"></div>
+
+        <div class="games-grid" id="gamesGrid">
+
+
+          <!-- FC MOBILE -->
+
+          <article
+            class="game-card"
+            onclick="openGame('fc-mobile')"
+          >
+
+            <img
+              src="images/fc-mobile.jpg"
+              alt="FC Mobile"
+            >
+
+            <div class="game-body">
+
+              <h3>
+                FC Mobile
+              </h3>
+
+              <p>
+                Conteúdos e packs para FC Mobile.
+              </p>
+
+              <button>
+                Ver conteúdos →
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- EFOOTBALL -->
+
+          <article
+            class="game-card"
+            onclick="openGame('efootball')"
+          >
+
+            <img
+              src="images/efootball.jpg"
+              alt="eFootball"
+            >
+
+            <div class="game-body">
+
+              <h3>
+                eFootball
+              </h3>
+
+              <p>
+                Conteúdos e recursos para eFootball.
+              </p>
+
+              <button>
+                Ver conteúdos →
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- FREE FIRE -->
+
+          <article
+            class="game-card"
+            onclick="openGame('free-fire')"
+          >
+
+            <img
+              src="images/free-fire.jpg"
+              alt="Free Fire"
+            >
+
+            <div class="game-body">
+
+              <h3>
+                Free Fire
+              </h3>
+
+              <p>
+                Conteúdos e produtos para Free Fire.
+              </p>
+
+              <button>
+                Ver conteúdos →
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- PUBG MOBILE -->
+
+          <article
+            class="game-card"
+            onclick="openGame('pubg-mobile')"
+          >
+
+            <img
+              src="images/pubg-mobile.jpg"
+              alt="PUBG Mobile"
+            >
+
+            <div class="game-body">
+
+              <h3>
+                PUBG Mobile
+              </h3>
+
+              <p>
+                Conteúdos e recursos para PUBG Mobile.
+              </p>
+
+              <button>
+                Ver conteúdos →
+              </button>
+
+            </div>
+
+          </article>
+
+
+        </div>
 
       </div>
+
     </section>
 
 
-    <section id="sobre" class="section about">
+    <!-- =========================
+         CONTEÚDOS / PRODUTOS
+    ========================== -->
+
+    <section
+      id="conteudos"
+      class="section products-section"
+      style="display: none;"
+    >
+
       <div class="container">
 
-        <p class="tag">SOBRE NÓS</p>
+        <button
+          class="back-btn"
+          onclick="showGames()"
+        >
+          ← Voltar aos jogos
+        </button>
 
-        <h2>MZ Game Store</h2>
+
+        <div class="section-title">
+
+          <p class="tag" id="selectedGameTag">
+            CONTEÚDOS
+          </p>
+
+          <h2 id="selectedGameTitle">
+            Produtos
+          </h2>
+
+          <p>
+            Escolhe o produto que procuras e compra
+            diretamente pelo WhatsApp.
+          </p>
+
+        </div>
+
+
+        <!-- PRODUTOS SERÃO COLOCADOS AQUI PELO SCRIPT -->
+
+        <div
+          id="productGrid"
+          class="products"
+        ></div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SOBRE
+    ========================== -->
+
+    <section id="sobre" class="section about">
+
+      <div class="container">
+
+        <p class="tag">
+          SOBRE NÓS
+        </p>
+
+        <h2>
+          MZ Game Store
+        </h2>
 
         <p>
-          A MZ Game Store é uma loja dedicada a recursos,
-          packs e conteúdos para jogadores. Escolhe o produto
-          que procuras e fala diretamente connosco pelo WhatsApp.
+          A MZ Game Store é uma loja dedicada a conteúdos,
+          packs e recursos para jogadores. Escolhe o teu jogo,
+          encontra o produto que procuras e fala diretamente
+          connosco pelo WhatsApp.
         </p>
 
       </div>
+
     </section>
 
 
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+
     <section id="contacto" class="section contact">
+
       <div class="container">
 
-        <p class="tag">CONTACTO</p>
+        <p class="tag">
+          CONTACTO
+        </p>
 
-        <h2>Precisas de ajuda?</h2>
+        <h2>
+          Precisas de ajuda?
+        </h2>
 
         <p>
           Fala diretamente connosco pelo WhatsApp.
@@ -104,20 +337,32 @@
         </a>
 
       </div>
+
     </section>
 
   </main>
 
 
+  <!-- =========================
+       RODAPÉ
+  ========================== -->
+
   <footer>
+
     <div class="container">
-      © <span id="year"></span> MZ Game Store.
+
+      © <span id="year"></span>
+      MZ Game Store.
       Todos os direitos reservados.
+
     </div>
+
   </footer>
 
+
+  <!-- SCRIPT -->
 
   <script src="script.js"></script>
 
 </body>
-  </html>
+</html>
