@@ -2,9 +2,7 @@
 // MZ GAME STORE
 // ================================
 
-// Coloca aqui o teu número do WhatsApp.
-// Exemplo: 25884XXXXXXX
-const WHATSAPP_NUMBER = "258840000000";
+const WHATSAPP_NUMBER = "258833255852";
 
 
 // ================================
@@ -12,26 +10,94 @@ const WHATSAPP_NUMBER = "258840000000";
 // ================================
 
 const products = [
+
+  // PACKS
   {
-    name: "Pack de Recursos",
+    name: "Pack Básico",
     price: "100 MT",
     image: "images/pack.jpg",
-    description: "Pack de recursos para melhorar a tua experiência de jogo."
+    description: "Pack básico de recursos para jogos.",
+    category: "Packs"
   },
 
   {
-    name: "FC Mobile Pack",
+    name: "Pack Pro",
     price: "150 MT",
-    image: "images/fc-mobile.jpg",
-    description: "Recursos e conteúdo para jogadores de FC Mobile."
+    image: "images/pack-pro.jpg",
+    description: "Pack com recursos especiais.",
+    category: "Packs"
   },
 
   {
     name: "Pack Premium",
     price: "250 MT",
     image: "images/pack-premium.jpg",
-    description: "Pack premium com recursos selecionados."
+    description: "Pack premium com conteúdos selecionados.",
+    category: "Packs"
+  },
+
+  {
+    name: "Pack Ultimate",
+    price: "350 MT",
+    image: "images/pack-ultimate.jpg",
+    description: "Pack completo para jogadores.",
+    category: "Packs"
+  },
+
+
+  // FC MOBILE
+  {
+    name: "FC Mobile Pack",
+    price: "150 MT",
+    image: "images/fc-mobile.jpg",
+    description: "Recursos para FC Mobile.",
+    category: "FC Mobile"
+  },
+
+  {
+    name: "FC Mobile Premium",
+    price: "300 MT",
+    image: "images/fc-mobile-premium.jpg",
+    description: "Conteúdo premium para FC Mobile.",
+    category: "FC Mobile"
+  },
+
+
+  // PASSE DE ESTRELAS
+  {
+    name: "Passe de Estrelas",
+    price: "250 MT",
+    image: "images/passe-estrelas.jpg",
+    description: "Passe de Estrelas para a tua conta.",
+    category: "Passe de Estrelas"
+  },
+
+  {
+    name: "Passe de Estrelas Premium",
+    price: "400 MT",
+    image: "images/passe-estrelas-premium.jpg",
+    description: "Versão premium do Passe de Estrelas.",
+    category: "Passe de Estrelas"
+  },
+
+
+  // GIFT CARDS
+  {
+    name: "Gift Card 10$",
+    price: "700 MT",
+    image: "images/gift-card-10.jpg",
+    description: "Gift Card de 10 dólares.",
+    category: "Gift Cards"
+  },
+
+  {
+    name: "Gift Card 20$",
+    price: "1.400 MT",
+    image: "images/gift-card-20.jpg",
+    description: "Gift Card de 20 dólares.",
+    category: "Gift Cards"
   }
+
 ];
 
 
@@ -42,7 +108,7 @@ const products = [
 function whatsappLink(product) {
 
   const message =
-    `Olá! Quero comprar o produto: ${product.name}. ` +
+    `Olá! Quero comprar: ${product.name}. ` +
     `Preço: ${product.price}.`;
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -62,6 +128,7 @@ products.forEach(product => {
   card.className = "card";
 
   card.innerHTML = `
+
     <img
       src="${product.image}"
       alt="${product.name}"
@@ -83,10 +150,11 @@ products.forEach(product => {
         target="_blank"
         rel="noopener"
       >
-        💬 Comprar pelo WhatsApp
+        💬 Comprar
       </a>
 
     </div>
+
   `;
 
   grid.appendChild(card);
@@ -95,7 +163,7 @@ products.forEach(product => {
 
 
 // ================================
-// BOTÃO DE CONTACTO
+// CONTACTO WHATSAPP
 // ================================
 
 const contactWhatsApp =
@@ -109,7 +177,7 @@ contactWhatsApp.href =
 
 
 // ================================
-// ANO AUTOMÁTICO
+// ANO
 // ================================
 
 document.getElementById("year").textContent =
