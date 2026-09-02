@@ -892,3 +892,210 @@ font-size: 9px;
 }
 
   }
+
+/* =========================
+   BANNER DA LOJA
+========================= */
+
+.store-banner {
+  padding: 25px 0;
+  background:
+    linear-gradient(
+      135deg,
+      #123b29,
+      #0b1728 55%,
+      #111a2b
+    );
+  border-bottom: 1px solid #243149;
+}
+
+.banner-content {
+  min-height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 35px;
+
+  border: 1px solid #2b4059;
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 85% 50%,
+      rgba(53, 232, 121, 0.15),
+      transparent 35%
+    );
+}
+
+.banner-text {
+  max-width: 650px;
+}
+
+.banner-badge {
+  display: inline-block;
+
+  padding: 7px 12px;
+
+  margin-bottom: 14px;
+
+  border-radius: 20px;
+
+  background: rgba(34, 197, 94, 0.15);
+
+  color: #35e879;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.banner-text h2 {
+  font-size: clamp(32px, 6vw, 55px);
+
+  line-height: 1.05;
+
+  margin-bottom: 14px;
+}
+
+.banner-text p {
+  color: #aeb9cd;
+
+  max-width: 520px;
+
+  margin-bottom: 22px;
+}
+
+.banner-btn {
+  padding: 13px 22px;
+}
+
+.banner-games {
+  width: 230px;
+  height: 230px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border-radius: 50%;
+
+  background: rgba(8, 13, 24, 0.55);
+
+  border: 1px solid #2b4059;
+
+  font-size: 55px;
+
+  flex-shrink: 0;
+}
+
+.banner-games span {
+  color: #aeb9cd;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   PRODUTOS EM DESTAQUE
+========================= */
+
+.featured-section {
+  background: #0b1220;
+}
+
+.featured-products {
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+}
+
+.featured-card {
+  position: relative;
+}
+
+.featured-label {
+  position: absolute;
+
+  top: 12px;
+  left: 12px;
+
+  z-index: 2;
+
+  padding: 6px 9px;
+
+  border-radius: 7px;
+
+  background: #22c55e;
+
+  color: #041008;
+
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+  .banner-content {
+    padding: 28px;
+
+  }
+
+  .banner-games {
+    width: 180px;
+    height: 180px;
+  }
+
+  .featured-products {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .store-banner {
+    padding: 15px 0;
+  }
+
+  .banner-content {
+    min-height: 360px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 25px;
+
+  }
+
+  .banner-games {
+    display: none;
+  }
+
+  .banner-text h2 {
+    font-size: 36px;
+  }
+
+  .featured-products {
+    grid-template-columns: 1fr;
+  }
+
+}
