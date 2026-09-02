@@ -1,139 +1,128 @@
-// ========================================
-// MZ GAME STORE 2.0
-// ========================================
+/* =========================================================
+   MZ GAME STORE 2.0
+   SCRIPT PRINCIPAL
+   ========================================================= */
 
-// COLOCA AQUI O TEU NÚMERO REAL DO WHATSAPP
+/* =========================
+   CONFIGURAÇÃO WHATSAPP
+   ========================= */
+
+// ⚠️ COLOCA AQUI O TEU NÚMERO REAL DO WHATSAPP
+// Formato: código do país + número, sem +, espaços ou -
 const WHATSAPP_NUMBER = "258840000000";
 
-// ========================================
-// PRODUTOS
-// ========================================
+
+/* =========================
+   PRODUTOS
+   ========================= */
 
 const products = [
+  {
+    id: 1,
+    game: "fc-mobile",
+    name: "Pack Básico",
+    price: "100 MT",
+    image: "images/pack.jpg",
+    description: "Pack básico para FC Mobile."
+  },
+  {
+    id: 2,
+    game: "fc-mobile",
+    name: "Pack Premium",
+    price: "250 MT",
+    image: "images/pack-premium.jpg",
+    description: "Pack premium para FC Mobile."
+  },
+  {
+    id: 3,
+    game: "fc-mobile",
+    name: "Pack Pro",
+    price: "150 MT",
+    image: "images/pack-pro.jpg",
+    description: "Pack especial para FC Mobile."
+  },
+  {
+    id: 4,
+    game: "fc-mobile",
+    name: "Passe de Estrelas",
+    price: "250 MT",
+    image: "images/passe-estrelas.jpg",
+    description: "Passe de Estrelas para FC Mobile."
+  },
 
-// FC MOBILE
-{
-id: 1,
-game: "fc-mobile",
-name: "Pack Básico",
-price: "100 MT",
-image: "images/pack.jpg",
-description: "Pack básico para FC Mobile."
-},
+  {
+    id: 5,
+    game: "efootball",
+    name: "Pack eFootball",
+    price: "150 MT",
+    image: "images/efootball-pack.jpg",
+    description: "Conteúdo para eFootball."
+  },
+  {
+    id: 6,
+    game: "efootball",
+    name: "Pack Premium eFootball",
+    price: "300 MT",
+    image: "images/efootball-premium.jpg",
+    description: "Conteúdo premium para eFootball."
+  },
+  {
+    id: 7,
+    game: "efootball",
+    name: "Coins eFootball",
+    price: "500 MT",
+    image: "images/efootball-coins.jpg",
+    description: "Conteúdo para a tua conta eFootball."
+  },
 
-{
-id: 2,
-game: "fc-mobile",
-name: "Pack Premium",
-price: "250 MT",
-image: "images/pack-premium.jpg",
-description: "Pack premium para FC Mobile."
-},
+  {
+    id: 8,
+    game: "free-fire",
+    name: "Diamantes Free Fire",
+    price: "100 MT",
+    image: "images/free-fire-diamonds.jpg",
+    description: "Diamantes para Free Fire."
+  },
+  {
+    id: 9,
+    game: "free-fire",
+    name: "Pack Free Fire",
+    price: "200 MT",
+    image: "images/free-fire-pack.jpg",
+    description: "Pack especial para Free Fire."
+  },
+  {
+    id: 10,
+    game: "free-fire",
+    name: "Pack Premium Free Fire",
+    price: "350 MT",
+    image: "images/free-fire-premium.jpg",
+    description: "Conteúdo premium para Free Fire."
+  },
 
-{
-id: 3,
-game: "fc-mobile",
-name: "Pack Pro",
-price: "150 MT",
-image: "images/pack-pro.jpg",
-description: "Pack especial para FC Mobile."
-},
-
-{
-id: 4,
-game: "fc-mobile",
-name: "Passe de Estrelas",
-price: "250 MT",
-image: "images/passe-estrelas.jpg",
-description: "Passe de Estrelas para FC Mobile."
-},
-
-// EFOOTBALL
-{
-id: 5,
-game: "efootball",
-name: "Pack eFootball",
-price: "150 MT",
-image: "images/efootball-pack.jpg",
-description: "Conteúdo para eFootball."
-},
-
-{
-id: 6,
-game: "efootball",
-name: "Pack Premium eFootball",
-price: "300 MT",
-image: "images/efootball-premium.jpg",
-description: "Conteúdo premium para eFootball."
-},
-
-{
-id: 7,
-game: "efootball",
-name: "Coins eFootball",
-price: "500 MT",
-image: "images/efootball-coins.jpg",
-description: "Conteúdo para a tua conta eFootball."
-},
-
-// FREE FIRE
-{
-id: 8,
-game: "free-fire",
-name: "Diamantes Free Fire",
-price: "100 MT",
-image: "images/free-fire-diamonds.jpg",
-description: "Diamantes para Free Fire."
-},
-
-{
-id: 9,
-game: "free-fire",
-name: "Pack Free Fire",
-price: "200 MT",
-image: "images/free-fire-pack.jpg",
-description: "Pack especial para Free Fire."
-},
-
-{
-id: 10,
-game: "free-fire",
-name: "Pack Premium Free Fire",
-price: "350 MT",
-image: "images/free-fire-premium.jpg",
-description: "Conteúdo premium para Free Fire."
-},
-
-// PUBG MOBILE
-{
-id: 11,
-game: "pubg-mobile",
-name: "Pack PUBG Mobile",
-price: "200 MT",
-image: "images/pubg-pack.jpg",
-description: "Conteúdo para PUBG Mobile."
-},
-
-{
-id: 12,
-game: "pubg-mobile",
-name: "Pack Premium PUBG",
-price: "350 MT",
-image: "images/pubg-premium.jpg",
-description: "Conteúdo premium para PUBG Mobile."
-}
-
+  {
+    id: 11,
+    game: "pubg-mobile",
+    name: "Pack PUBG Mobile",
+    price: "200 MT",
+    image: "images/pubg-pack.jpg",
+    description: "Conteúdo para PUBG Mobile."
+  },
+  {
+    id: 12,
+    game: "pubg-mobile",
+    name: "Pack Premium PUBG",
+    price: "350 MT",
+    image: "images/pubg-premium.jpg",
+    description: "Conteúdo premium para PUBG Mobile."
+  }
 ];
 
-// ========================================
-// PRODUTOS EM DESTAQUE
-// ========================================
 
-const featuredProducts =
-  document.getElementById("featuredProducts");
+/* =========================
+   PRODUTOS EM DESTAQUE
+   ========================= */
 
-
-// Produtos escolhidos para aparecer na página inicial
 const featuredNames = [
   "Pack Premium",
   "Coins eFootball",
@@ -142,811 +131,1013 @@ const featuredNames = [
 ];
 
 
+/* =========================
+   NOMES DOS JOGOS
+   ========================= */
+
+const gameNames = {
+  "fc-mobile": "FC Mobile",
+  "efootball": "eFootball",
+  "free-fire": "Free Fire",
+  "pubg-mobile": "PUBG Mobile"
+};
+
+
+/* =========================
+   ESTADO
+   ========================= */
+
+let cart = [];
+let currentGame = null;
+let toastTimer = null;
+
+
+/* =========================
+   ELEMENTOS DO HTML
+   ========================= */
+
+const jogos = document.getElementById("jogos");
+const conteudos = document.getElementById("conteudos");
+
+const productGrid = document.getElementById("productGrid");
+
+const selectedGameTitle =
+  document.getElementById("selectedGameTitle");
+
+const selectedGameTag =
+  document.getElementById("selectedGameTag");
+
+const cartOverlay =
+  document.getElementById("cartOverlay");
+
+const cartItems =
+  document.getElementById("cartItems");
+
+const cartFooter =
+  document.getElementById("cartFooter");
+
+const cartTotal =
+  document.getElementById("cartTotal");
+
+const cartCount =
+  document.getElementById("cartCount");
+
+const toast =
+  document.getElementById("toast");
+
+const productSearchInput =
+  document.getElementById("productSearch");
+
+const contactWhatsApp =
+  document.getElementById("contactWhatsApp");
+
+const yearElement =
+  document.getElementById("year");
+
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+function whatsappLink(product) {
+
+  const message =
+    `Olá! Quero comprar o produto "${product.name}" ` +
+    `do ${gameNames[product.game]}. ` +
+    `Preço: ${product.price}.`;
+
+  return (
+    `https://wa.me/${WHATSAPP_NUMBER}` +
+    `?text=${encodeURIComponent(message)}`
+  );
+}
+
+
+/* =========================================================
+   PRODUTOS EM DESTAQUE
+   ========================================================= */
+
 function renderFeaturedProducts() {
 
-  if (!featuredProducts) return;
+  const container =
+    document.getElementById("featuredProducts");
 
-  featuredProducts.innerHTML = "";
+  if (!container) {
+    return;
+  }
 
-  const featured =
+  const featuredProducts =
     products.filter(product =>
       featuredNames.includes(product.name)
     );
 
-  featured.forEach(product => {
+  container.innerHTML =
+    featuredProducts.map(product => {
 
-    const card =
-      document.createElement("article");
+      return `
+        <div class="product-card featured-card">
 
-    card.className =
-      "card featured-card";
+          <div class="featured-badge">
+            🔥 DESTAQUE
+          </div>
 
+          <img
+            src="${product.image}"
+            alt="${product.name}"
+            class="product-image"
+          >
 
-    card.innerHTML = `
+          <div class="product-info">
 
-      <span class="featured-label">
-        🔥 DESTAQUE
-      </span>
+            <h3>${product.name}</h3>
 
-      <img
-        src="${product.image}"
-        alt="${product.name}"
-        onerror="this.style.display='none'"
-      >
+            <p>
+              ${product.description}
+            </p>
 
-      <div class="card-body">
+            <div class="product-bottom">
 
-        <h3>
-          ${product.name}
-        </h3>
+              <strong>
+                ${product.price}
+              </strong>
 
-        <p>
-          ${product.description}
-        </p>
+              <a
+                href="${whatsappLink(product)}"
+                target="_blank"
+                rel="noopener"
+                class="whatsapp-btn"
+              >
+                💬 Comprar
+              </a>
 
-        <div class="price">
-          ${product.price}
+            </div>
+
+          </div>
+
         </div>
+      `;
 
-        <a
-          class="buy"
-          href="${whatsappLink(product)}"
-          target="_blank"
-          rel="noopener"
-        >
-          💬 Comprar pelo WhatsApp
-        </a>
-
-      </div>
-
-    `;
-
-    featuredProducts.appendChild(card);
-
-  });
-
+    }).join("");
 }
 
 
-// Mostrar os destaques
-renderFeaturedProducts();
-
-// ========================================
-// NOMES DOS JOGOS
-// ========================================
-
-const gameNames = {
-"fc-mobile": "FC Mobile",
-"efootball": "eFootball",
-"free-fire": "Free Fire",
-"pubg-mobile": "PUBG Mobile"
-};
-
-// ========================================
-// ESTADO
-// ========================================
-
-let cart = [];
-
-let currentGame = null;
-
-// ========================================
-// ELEMENTOS
-// ========================================
-
-const gamesSection =
-document.getElementById("jogos");
-
-const productsSection =
-document.getElementById("conteudos");
-
-const productGrid =
-document.getElementById("productGrid");
-
-const selectedGameTitle =
-document.getElementById("selectedGameTitle");
-
-const selectedGameTag =
-document.getElementById("selectedGameTag");
-
-const cartOverlay =
-document.getElementById("cartOverlay");
-
-const cartItems =
-document.getElementById("cartItems");
-
-const cartFooter =
-document.getElementById("cartFooter");
-
-const cartTotal =
-document.getElementById("cartTotal");
-
-const cartCount =
-document.getElementById("cartCount");
-
-const toast =
-document.getElementById("toast");
-
-// ========================================
-// ABRIR JOGO
-// ========================================
+/* =========================================================
+   ABRIR UM JOGO
+   ========================================================= */
 
 function openGame(game) {
 
-currentGame = game;
+  currentGame = game;
 
-const gameName =
-gameNames[game] || "Jogo";
+  const gameName =
+    gameNames[game] || game;
 
-selectedGameTag.textContent =
-gameName.toUpperCase();
+  if (selectedGameTitle) {
+    selectedGameTitle.textContent =
+      `${gameName} — Conteúdos`;
+  }
 
-selectedGameTitle.textContent =
-"${gameName} — Conteúdos";
+  if (selectedGameTag) {
+    selectedGameTag.textContent =
+      gameName.toUpperCase();
+  }
 
-const search =
-document.getElementById("productSearchInput");
+  if (productSearchInput) {
+    productSearchInput.value = "";
+  }
 
-if (search) {
-search.value = "";
+  if (jogos) {
+    jogos.style.display = "none";
+  }
+
+  if (conteudos) {
+    conteudos.style.display = "block";
+  }
+
+  renderProducts(products);
 }
 
-renderProducts(products);
 
-gamesSection.style.display = "none";
+/* =========================================================
+   MOSTRAR PRODUTOS
+   ========================================================= */
 
-productsSection.style.display = "block";
+function renderProducts(list = products) {
 
-window.scrollTo({
-top: 0,
-behavior: "smooth"
-});
+  if (!productGrid) {
+    return;
+  }
 
+  const filteredProducts =
+    list.filter(product => {
+
+      if (!currentGame) {
+        return true;
+      }
+
+      return product.game === currentGame;
+
+    });
+
+
+  if (filteredProducts.length === 0) {
+
+    productGrid.innerHTML = `
+      <div class="empty-products">
+        <p>😕 Nenhum produto encontrado.</p>
+      </div>
+    `;
+
+    return;
+  }
+
+
+  productGrid.innerHTML =
+    filteredProducts.map(product => {
+
+      return `
+        <div
+          class="product-card"
+          data-product-id="${product.id}"
+        >
+
+          <img
+            src="${product.image}"
+            alt="${product.name}"
+            class="product-image"
+          >
+
+          <div class="product-info">
+
+            <h3>
+              ${product.name}
+            </h3>
+
+            <p>
+              ${product.description}
+            </p>
+
+            <div class="product-price">
+              ${product.price}
+            </div>
+
+            <div class="product-actions">
+
+              <button
+                type="button"
+                class="cart-btn"
+                onclick="addToCart(${product.id})"
+              >
+                🛒 Adicionar ao carrinho
+              </button>
+
+              <a
+                href="${whatsappLink(product)}"
+                target="_blank"
+                rel="noopener"
+                class="whatsapp-btn"
+              >
+                💬 Comprar pelo WhatsApp
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+      `;
+
+    }).join("");
 }
 
-// ========================================
-// MOSTRAR PRODUTOS
-// ========================================
 
-function renderProducts(list) {
-
-productGrid.innerHTML = "";
-
-const gameProducts =
-list.filter(product =>
-product.game === currentGame
-);
-
-const noResults =
-document.getElementById("noResults");
-
-if (gameProducts.length === 0) {
-
-noResults.style.display = "block";
-
-return;
-
-}
-
-noResults.style.display = "none";
-
-gameProducts.forEach(product => {
-
-const card =
-  document.createElement("article");
-
-card.className = "card";
-
-
-card.innerHTML = `
-
-  <img
-    src="${product.image}"
-    alt="${product.name}"
-    onerror="this.style.display='none'"
-  >
-
-  <div class="card-body">
-
-    <h3>
-      ${product.name}
-    </h3>
-
-    <p>
-      ${product.description}
-    </p>
-
-    <div class="price">
-      ${product.price}
-    </div>
-
-    <div class="product-actions">
-
-      <button
-        class="add-cart"
-        onclick="addToCart(${product.id})"
-      >
-        🛒 Adicionar ao carrinho
-      </button>
-
-      <a
-        class="buy"
-        href="${whatsappLink(product)}"
-        target="_blank"
-        rel="noopener"
-      >
-        💬 Comprar pelo WhatsApp
-      </a>
-
-    </div>
-
-  </div>
-
-`;
-
-productGrid.appendChild(card);
-
-});
-
-}
-
-// ========================================
-// PESQUISA DOS PRODUTOS
-// ========================================
+/* =========================================================
+   PESQUISA DOS JOGOS
+   ========================================================= */
 
 function searchProducts() {
 
-const input =
-document.getElementById("searchInput");
+  const input =
+    document.getElementById("gameSearch");
 
-const text =
-input.value.toLowerCase().trim();
+  const searchTerm =
+    input
+      ? input.value.toLowerCase().trim()
+      : "";
 
-// Pesquisa geral
-// Se estiver na página dos jogos,
-// mostra os jogos normalmente.
+  const cards =
+    document.querySelectorAll(".game-card");
 
-if (!text) {
 
-document
-  .querySelectorAll(".game-card")
-  .forEach(card => {
-    card.style.display = "";
+  cards.forEach(card => {
+
+    const text =
+      card.textContent.toLowerCase();
+
+    if (
+      !searchTerm ||
+      text.includes(searchTerm)
+    ) {
+
+      card.style.display = "";
+
+    } else {
+
+      card.style.display = "none";
+
+    }
+
   });
-
-return;
-
 }
 
-document
-.querySelectorAll(".game-card")
-.forEach(card => {
 
-  const content =
-    card.textContent.toLowerCase();
-
-  card.style.display =
-    content.includes(text)
-      ? ""
-      : "none";
-
-});
-
-}
-
-// ========================================
-// PESQUISA DENTRO DO JOGO
-// ========================================
+/* =========================================================
+   PESQUISA DENTRO DO JOGO
+   ========================================================= */
 
 function filterCurrentGame() {
 
-if (!currentGame) return;
-
-const input =
-document.getElementById(
-"productSearchInput"
-);
-
-const text =
-input.value.toLowerCase().trim();
-
-const filtered =
-products.filter(product => {
-
-  if (product.game !== currentGame) {
-    return false;
+  if (!productSearchInput) {
+    return;
   }
 
-  return (
-    product.name
+  const searchTerm =
+    productSearchInput.value
       .toLowerCase()
-      .includes(text) ||
+      .trim();
 
-    product.description
-      .toLowerCase()
-      .includes(text)
-  );
 
-});
+  const filtered =
+    products.filter(product => {
 
-renderProducts(filtered);
+      const belongsToGame =
+        !currentGame ||
+        product.game === currentGame;
 
+      const searchableText =
+        `${product.name} ${product.description}`
+          .toLowerCase();
+
+      return (
+        belongsToGame &&
+        searchableText.includes(searchTerm)
+      );
+
+    });
+
+
+  renderProducts(filtered);
 }
 
-// ========================================
-// CARRINHO
-// ========================================
+
+/* =========================================================
+   ADICIONAR AO CARRINHO
+   ========================================================= */
 
 function addToCart(productId) {
 
-const product =
-products.find(
-item => item.id === productId
-);
+  const product =
+    products.find(
+      item => item.id === productId
+    );
 
-if (!product) return;
 
-const existing =
-cart.find(
-item => item.id === productId
-);
+  if (!product) {
+    return;
+  }
 
-if (existing) {
 
-existing.quantity++;
+  const existing =
+    cart.find(
+      item => item.id === productId
+    );
 
-} else {
 
-cart.push({
-  ...product,
-  quantity: 1
-});
+  if (existing) {
 
+    existing.quantity += 1;
+
+  } else {
+
+    cart.push({
+      ...product,
+      quantity: 1
+    });
+
+  }
+
+
+  updateCart();
+
+
+  showToast(
+    `${product.name} adicionado ao carrinho!`
+  );
 }
 
-updateCart();
 
-showToast(
-"${product.name} adicionado ao carrinho!"
-);
-
-}
-
-// ========================================
-// REMOVER PRODUTO
-// ========================================
+/* =========================================================
+   REMOVER DO CARRINHO
+   ========================================================= */
 
 function removeFromCart(productId) {
 
-cart =
-cart.filter(
-item => item.id !== productId
-);
+  cart =
+    cart.filter(
+      item => item.id !== productId
+    );
 
-updateCart();
-
+  updateCart();
 }
 
-// ========================================
-// ALTERAR QUANTIDADE
-// ========================================
 
-function changeQuantity(productId, change) {
+/* =========================================================
+   ALTERAR QUANTIDADE
+   ========================================================= */
 
-const item =
-cart.find(
-product => product.id === productId
-);
+function changeQuantity(
+  productId,
+  change
+) {
 
-if (!item) return;
+  const item =
+    cart.find(
+      product => product.id === productId
+    );
 
-item.quantity += change;
 
-if (item.quantity <= 0) {
+  if (!item) {
+    return;
+  }
 
-removeFromCart(productId);
 
-return;
+  item.quantity += change;
 
+
+  if (item.quantity <= 0) {
+
+    removeFromCart(productId);
+
+    return;
+  }
+
+
+  updateCart();
 }
 
-updateCart();
 
-}
-
-// ========================================
-// ATUALIZAR CARRINHO
-// ========================================
-
-function updateCart() {
-
-const totalItems =
-cart.reduce(
-(total, item) =>
-total + item.quantity,
-0
-);
-
-cartCount.textContent =
-totalItems;
-
-if (cart.length === 0) {
-
-cartItems.innerHTML = `
-
-  <div class="empty-cart">
-
-    <div>
-      🛒
-    </div>
-
-    <p>
-      O teu carrinho está vazio.
-    </p>
-
-    <button
-      onclick="closeCart()"
-      class="btn"
-    >
-      Ver produtos
-    </button>
-
-  </div>
-
-`;
-
-cartFooter.style.display =
-  "none";
-
-return;
-
-}
-
-cartFooter.style.display =
-"block";
-
-cartItems.innerHTML = "";
-
-cart.forEach(item => {
-
-const cartItem =
-  document.createElement("div");
-
-cartItem.className =
-  "cart-item";
-
-
-cartItem.innerHTML = `
-
-  <img
-    class="cart-item-image"
-    src="${item.image}"
-    alt="${item.name}"
-  >
-
-  <div class="cart-item-info">
-
-    <h3>
-      ${item.name}
-    </h3>
-
-    <div class="cart-item-game">
-      ${gameNames[item.game]}
-    </div>
-
-    <div class="cart-item-price">
-      ${item.price}
-    </div>
-
-    <div
-      style="
-        display:flex;
-        align-items:center;
-        gap:8px;
-        margin-top:8px;
-      "
-    >
-
-      <button
-        onclick="changeQuantity(${item.id}, -1)"
-        style="
-          width:27px;
-          height:27px;
-          border:1px solid #2c3b55;
-          border-radius:6px;
-          background:#111a2b;
-          color:white;
-        "
-      >
-        −
-      </button>
-
-      <strong>
-        ${item.quantity}
-      </strong>
-
-      <button
-        onclick="changeQuantity(${item.id}, 1)"
-        style="
-          width:27px;
-          height:27px;
-          border:1px solid #2c3b55;
-          border-radius:6px;
-          background:#111a2b;
-          color:white;
-        "
-      >
-        +
-      </button>
-
-    </div>
-
-  </div>
-
-
-  <button
-    class="remove-item"
-    onclick="removeFromCart(${item.id})"
-    title="Remover"
-  >
-    ✕
-  </button>
-
-`;
-
-
-cartItems.appendChild(cartItem);
-
-});
-
-const total =
-calculateTotal();
-
-cartTotal.textContent =
-"${total} MT";
-
-}
-
-// ========================================
-// CALCULAR TOTAL
-// ========================================
+/* =========================================================
+   CALCULAR TOTAL
+   ========================================================= */
 
 function calculateTotal() {
 
-return cart.reduce(
-(total, item) => {
+  return cart.reduce(
+    (total, item) => {
 
-  const price =
-    parseFloat(
-      item.price
-        .replace("MT", "")
-        .replace(",", ".")
-        .trim()
-    );
+      const price =
+        parseFloat(
+          String(item.price)
+            .replace(/[^\d.,]/g, "")
+            .replace(",", ".")
+        ) || 0;
 
-  return total +
-    (price * item.quantity);
+      return (
+        total +
+        price * item.quantity
+      );
 
-},
-0
-
-);
-
+    },
+    0
+  );
 }
 
-// ========================================
-// ABRIR CARRINHO
-// ========================================
+
+/* =========================================================
+   ATUALIZAR CARRINHO
+   ========================================================= */
+
+function updateCart() {
+
+  if (!cartItems) {
+    return;
+  }
+
+
+  const totalItems =
+    cart.reduce(
+      (total, item) =>
+        total + item.quantity,
+      0
+    );
+
+
+  if (cartCount) {
+
+    cartCount.textContent =
+      totalItems;
+
+  }
+
+
+  if (cart.length === 0) {
+
+    cartItems.innerHTML = `
+      <div class="empty-cart">
+        <div class="empty-cart-icon">
+          🛒
+        </div>
+
+        <h3>
+          O teu carrinho está vazio
+        </h3>
+
+        <p>
+          Adiciona produtos para começar.
+        </p>
+      </div>
+    `;
+
+
+    if (cartFooter) {
+      cartFooter.style.display = "none";
+    }
+
+
+    if (cartTotal) {
+      cartTotal.textContent = "0 MT";
+    }
+
+
+    return;
+  }
+
+
+  if (cartFooter) {
+    cartFooter.style.display = "";
+  }
+
+
+  cartItems.innerHTML =
+    cart.map(item => {
+
+      const itemPrice =
+        parseFloat(
+          String(item.price)
+            .replace(/[^\d.,]/g, "")
+            .replace(",", ".")
+        ) || 0;
+
+
+      const itemTotal =
+        itemPrice * item.quantity;
+
+
+      return `
+        <div class="cart-item">
+
+          <img
+            src="${item.image}"
+            alt="${item.name}"
+            class="cart-item-image"
+          >
+
+          <div class="cart-item-info">
+
+            <h4>
+              ${item.name}
+            </h4>
+
+            <small>
+              ${gameNames[item.game]}
+            </small>
+
+            <strong>
+              ${item.price}
+            </strong>
+
+            <div class="quantity-controls">
+
+              <button
+                type="button"
+                onclick="changeQuantity(${item.id}, -1)"
+              >
+                −
+              </button>
+
+              <span>
+                ${item.quantity}
+              </span>
+
+              <button
+                type="button"
+                onclick="changeQuantity(${item.id}, 1)"
+              >
+                +
+              </button>
+
+            </div>
+
+            <div class="cart-item-total">
+              ${itemTotal} MT
+            </div>
+
+          </div>
+
+          <button
+            type="button"
+            class="remove-cart-item"
+            onclick="removeFromCart(${item.id})"
+            aria-label="Remover ${item.name}"
+          >
+            🗑️
+          </button>
+
+        </div>
+      `;
+
+    }).join("");
+
+
+  const total =
+    calculateTotal();
+
+
+  if (cartTotal) {
+
+    cartTotal.textContent =
+      `${total} MT`;
+
+  }
+}
+
+
+/* =========================================================
+   ABRIR CARRINHO
+   ========================================================= */
 
 function openCart() {
 
-cartOverlay.classList.add("active");
+  if (!cartOverlay) {
+    return;
+  }
 
-document.body.classList.add("cart-open");
+  cartOverlay.classList.add("active");
 
+  document.body.classList.add("cart-open");
 }
 
-// ========================================
-// FECHAR CARRINHO
-// ========================================
+
+/* =========================================================
+   FECHAR CARRINHO
+   ========================================================= */
 
 function closeCart() {
 
-cartOverlay.classList.remove("active");
+  if (!cartOverlay) {
+    return;
+  }
 
-document.body.classList.remove("cart-open");
+  cartOverlay.classList.remove("active");
 
+  document.body.classList.remove("cart-open");
 }
 
-// ========================================
-// FECHAR CLICANDO FORA
-// ========================================
+
+/* =========================================================
+   FECHAR AO CLICAR FORA
+   ========================================================= */
 
 function closeCartOutside(event) {
 
-if (event.target === cartOverlay) {
-closeCart();
+  if (!cartOverlay) {
+    return;
+  }
+
+
+  if (event.target === cartOverlay) {
+
+    closeCart();
+
+  }
 }
 
-}
 
-// ========================================
-// LIMPAR CARRINHO
-// ========================================
+/* =========================================================
+   LIMPAR CARRINHO
+   ========================================================= */
 
 function clearCart() {
 
-if (cart.length === 0) return;
+  if (cart.length === 0) {
+    return;
+  }
 
-cart = [];
 
-updateCart();
+  cart = [];
 
-showToast(
-"Carrinho limpo!"
-);
+  updateCart();
 
+  showToast(
+    "Carrinho limpo."
+  );
 }
 
-// ========================================
-// WHATSAPP — PRODUTO INDIVIDUAL
-// ========================================
 
-function whatsappLink(product) {
-
-const message =
-"Olá! Quero comprar o produto "${product.name}" do ${gameNames[product.game]}. Preço: ${product.price}.";
-
-return (
-"https://wa.me/${WHATSAPP_NUMBER}" +
-"?text=${encodeURIComponent(message)}"
-);
-
-}
-
-// ========================================
-// FINALIZAR PEDIDO NO WHATSAPP
-// ========================================
+/* =========================================================
+   FINALIZAR PEDIDO PELO WHATSAPP
+   ========================================================= */
 
 function checkoutWhatsApp() {
 
-if (cart.length === 0) {
+  if (cart.length === 0) {
 
-showToast(
-  "O carrinho está vazio!"
-);
+    showToast(
+      "O teu carrinho está vazio."
+    );
 
-return;
+    return;
+  }
+
+
+  let message =
+    "Olá! Quero fazer um pedido na MZ Game Store.\n\n";
+
+
+  cart.forEach(item => {
+
+    const price =
+      parseFloat(
+        String(item.price)
+          .replace(/[^\d.,]/g, "")
+          .replace(",", ".")
+      ) || 0;
+
+
+    const itemTotal =
+      price * item.quantity;
+
+
+    message +=
+      `🎮 ${gameNames[item.game]}\n` +
+      `📦 ${item.name}\n` +
+      `🔢 Quantidade: ${item.quantity}\n` +
+      `💰 ${itemTotal} MT\n\n`;
+
+  });
+
+
+  const total =
+    calculateTotal();
+
+
+  message +=
+    `💵 TOTAL: ${total} MT\n\n` +
+    "Aguardo confirmação. Obrigado!";
+
+
+  const url =
+    `https://wa.me/${WHATSAPP_NUMBER}` +
+    `?text=${encodeURIComponent(message)}`;
+
+
+  window.open(
+    url,
+    "_blank",
+    "noopener"
+  );
+}
+
+
+/* =========================================================
+   CONTACTO WHATSAPP
+   ========================================================= */
+
+function setupWhatsAppContact() {
+
+  if (!contactWhatsApp) {
+    return;
+  }
+
+
+  const message =
+    "Olá! Preciso de ajuda com a MZ Game Store.";
+
+
+  contactWhatsApp.href =
+    `https://wa.me/${WHATSAPP_NUMBER}` +
+    `?text=${encodeURIComponent(message)}`;
 
 }
 
-let message =
-"Olá! Quero fazer um pedido na MZ Game Store.%0A%0A";
 
-cart.forEach(item => {
-
-const itemTotal =
-  parseFloat(
-    item.price
-      .replace("MT", "")
-      .replace(",", ".")
-      .trim()
-  ) * item.quantity;
-
-
-message +=
-  `🎮 ${gameNames[item.game]}%0A` +
-  `📦 ${item.name}%0A` +
-  `🔢 Quantidade: ${item.quantity}%0A` +
-  `💰 ${itemTotal} MT%0A%0A`;
-
-});
-
-const total =
-calculateTotal();
-
-message +=
-"💵 TOTAL: ${total} MT%0A%0A" +
-"Aguardo confirmação. Obrigado!";
-
-const url =
-"https://wa.me/${WHATSAPP_NUMBER}?text=${message}";
-
-window.open(
-url,
-"_blank"
-);
-
-}
-
-// ========================================
-// TOAST
-// ========================================
-
-let toastTimer;
+/* =========================================================
+   TOAST / NOTIFICAÇÃO
+   ========================================================= */
 
 function showToast(message) {
 
-toast.textContent =
-message;
+  if (!toast) {
+    return;
+  }
 
-toast.classList.add("show");
 
-clearTimeout(toastTimer);
+  toast.textContent =
+    message;
 
-toastTimer =
-setTimeout(() => {
 
-  toast.classList.remove("show");
+  toast.classList.add("show");
 
-}, 2500);
 
+  if (toastTimer) {
+
+    clearTimeout(toastTimer);
+
+  }
+
+
+  toastTimer =
+    setTimeout(() => {
+
+      toast.classList.remove("show");
+
+    }, 2500);
 }
 
-// ========================================
-// VOLTAR AOS JOGOS
-// ========================================
+
+/* =========================================================
+   VOLTAR PARA OS JOGOS
+   ========================================================= */
 
 function showGames() {
 
-currentGame = null;
+  currentGame = null;
 
-productsSection.style.display =
-"none";
 
-gamesSection.style.display =
-"block";
+  if (conteudos) {
+    conteudos.style.display = "none";
+  }
 
-const search =
-document.getElementById("searchInput");
 
-if (search) {
-search.value = "";
+  if (jogos) {
+    jogos.style.display = "";
+  }
+
+
+  if (productSearchInput) {
+    productSearchInput.value = "";
+  }
 }
 
-window.scrollTo({
-top: 0,
-behavior: "smooth"
-});
+
+/* =========================================================
+   EVENTOS
+   ========================================================= */
+
+function setupEvents() {
+
+  /*
+    Pesquisa dos produtos dentro do jogo
+  */
+
+  if (productSearchInput) {
+
+    productSearchInput.addEventListener(
+      "input",
+      filterCurrentGame
+    );
+
+  }
+
+
+  /*
+    Fechar carrinho clicando no fundo
+  */
+
+  if (cartOverlay) {
+
+    cartOverlay.addEventListener(
+      "click",
+      closeCartOutside
+    );
+
+  }
+
+
+  /*
+    Tecla ESC fecha o carrinho
+  */
+
+  document.addEventListener(
+    "keydown",
+    event => {
+
+      if (event.key === "Escape") {
+
+        closeCart();
+
+      }
+
+    }
+  );
 
 }
 
-// ========================================
-// CONTACTO WHATSAPP
-// ========================================
 
-const contactWhatsApp =
-document.getElementById(
-"contactWhatsApp"
-);
+/* =========================================================
+   ANO AUTOMÁTICO
+   ========================================================= */
 
-if (contactWhatsApp) {
+function setupYear() {
 
-const message =
-"Olá! Preciso de ajuda com a MZ Game Store.";
+  if (yearElement) {
 
-contactWhatsApp.href =
-"https://wa.me/${WHATSAPP_NUMBER}" +
-"?text=${encodeURIComponent(message)}";
+    yearElement.textContent =
+      new Date().getFullYear();
+
+  }
+}
+
+
+/* =========================================================
+   INICIALIZAÇÃO
+   ========================================================= */
+
+function initMZGameStore() {
+
+  renderFeaturedProducts();
+
+  setupWhatsAppContact();
+
+  setupEvents();
+
+  setupYear();
+
+  updateCart();
 
 }
 
-// ========================================
-// ANO
-// ========================================
 
-const year =
-document.getElementById("year");
+/* =========================================================
+   DISPONIBILIZAR FUNÇÕES PARA O HTML
+   ========================================================= */
 
-if (year) {
+window.openGame =
+  openGame;
 
-year.textContent =
-new Date().getFullYear();
+window.renderProducts =
+  renderProducts;
+
+window.searchProducts =
+  searchProducts;
+
+window.filterCurrentGame =
+  filterCurrentGame;
+
+window.addToCart =
+  addToCart;
+
+window.removeFromCart =
+  removeFromCart;
+
+window.changeQuantity =
+  changeQuantity;
+
+window.openCart =
+  openCart;
+
+window.closeCart =
+  closeCart;
+
+window.closeCartOutside =
+  closeCartOutside;
+
+window.clearCart =
+  clearCart;
+
+window.checkoutWhatsApp =
+  checkoutWhatsApp;
+
+window.showToast =
+  showToast;
+
+window.showGames =
+  showGames;
+
+
+/* =========================================================
+   INICIAR QUANDO O HTML ESTIVER PRONTO
+   ========================================================= */
+
+if (document.readyState === "loading") {
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    initMZGameStore
+  );
+
+} else {
+
+  initMZGameStore();
 
 }
-
-// ========================================
-// INICIALIZAR
-// ========================================
-
-updateCart();
