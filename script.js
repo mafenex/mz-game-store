@@ -126,6 +126,92 @@ description: "Conteúdo premium para PUBG Mobile."
 ];
 
 // ========================================
+// PRODUTOS EM DESTAQUE
+// ========================================
+
+const featuredProducts =
+  document.getElementById("featuredProducts");
+
+
+// Produtos escolhidos para aparecer na página inicial
+const featuredNames = [
+  "Pack Premium",
+  "Coins eFootball",
+  "Diamantes Free Fire",
+  "Pack Premium PUBG"
+];
+
+
+function renderFeaturedProducts() {
+
+  if (!featuredProducts) return;
+
+  featuredProducts.innerHTML = "";
+
+  const featured =
+    products.filter(product =>
+      featuredNames.includes(product.name)
+    );
+
+  featured.forEach(product => {
+
+    const card =
+      document.createElement("article");
+
+    card.className =
+      "card featured-card";
+
+
+    card.innerHTML = `
+
+      <span class="featured-label">
+        🔥 DESTAQUE
+      </span>
+
+      <img
+        src="${product.image}"
+        alt="${product.name}"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="card-body">
+
+        <h3>
+          ${product.name}
+        </h3>
+
+        <p>
+          ${product.description}
+        </p>
+
+        <div class="price">
+          ${product.price}
+        </div>
+
+        <a
+          class="buy"
+          href="${whatsappLink(product)}"
+          target="_blank"
+          rel="noopener"
+        >
+          💬 Comprar pelo WhatsApp
+        </a>
+
+      </div>
+
+    `;
+
+    featuredProducts.appendChild(card);
+
+  });
+
+}
+
+
+// Mostrar os destaques
+renderFeaturedProducts();
+
+// ========================================
 // NOMES DOS JOGOS
 // ========================================
 
