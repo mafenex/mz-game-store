@@ -3,7 +3,7 @@
 // ========================================
 
 // COLOCA AQUI O TEU NÚMERO REAL DO WHATSAPP
-const WHATSAPP_NUMBER = "258840000000";
+const WHATSAPP_NUMBER = "258833255852";
 
 
 // ========================================
